@@ -16,6 +16,8 @@
 		1D7B43DF250F4AE300BE7677 /* CarTrackExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43DE250F4AE300BE7677 /* CarTrackExamUITests.swift */; };
 		1D7B43ED250F523D00BE7677 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43EC250F523D00BE7677 /* LoginViewController.swift */; };
 		1D7B43F0250F53F100BE7677 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43EF250F53F100BE7677 /* User.swift */; };
+		1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43F3250F630700BE7677 /* DBHelper.swift */; };
+		1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43F7250F909400BE7677 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		1D7B43E0250F4AE400BE7677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7B43EC250F523D00BE7677 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1D7B43EF250F53F100BE7677 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1D7B43F3250F630700BE7677 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		1D7B43F7250F909400BE7677 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			children = (
 				1D7B43BC250F4AE000BE7677 /* AppDelegate.swift */,
 				1D7B43BE250F4AE000BE7677 /* SceneDelegate.swift */,
+				1D7B43F2250F62F400BE7677 /* Utilities */,
 				1D7B43F1250F53F500BE7677 /* Models */,
 				1D7B43EE250F53CE00BE7677 /* ViewControllers */,
 				1D7B43C2250F4AE000BE7677 /* Main.storyboard */,
@@ -134,7 +139,9 @@
 		1D7B43EE250F53CE00BE7677 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B43EC250F523D00BE7677 /* LoginViewController.swift */,
+				1D7B43FB250FBC2600BE7677 /* CountryList */,
+				1D7B43FA250FAB2B00BE7677 /* UserList */,
+				1D7B43F9250FAB2000BE7677 /* Login */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +152,37 @@
 				1D7B43EF250F53F100BE7677 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1D7B43F2250F62F400BE7677 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B43F3250F630700BE7677 /* DBHelper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1D7B43F9250FAB2000BE7677 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B43EC250F523D00BE7677 /* LoginViewController.swift */,
+				1D7B43F7250F909400BE7677 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1D7B43FA250FAB2B00BE7677 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		1D7B43FB250FBC2600BE7677 /* CountryList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CountryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +318,8 @@
 			files = (
 				1D7B43F0250F53F100BE7677 /* User.swift in Sources */,
 				1D7B43ED250F523D00BE7677 /* LoginViewController.swift in Sources */,
+				1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */,
+				1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */,
 				1D7B43BD250F4AE000BE7677 /* AppDelegate.swift in Sources */,
 				1D7B43BF250F4AE000BE7677 /* SceneDelegate.swift in Sources */,
 			);

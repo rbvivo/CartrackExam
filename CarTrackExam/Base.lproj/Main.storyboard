@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9dX-mR-5EZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -30,14 +30,52 @@
                     <view key="view" contentMode="scaleToFill" id="Qxi-g6-HCS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVc-Mh-Gb3">
+                                <rect key="frame" x="20" y="157" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULs-4O-5a9">
+                                <rect key="frame" x="20" y="128" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMk-yd-cqb">
+                                <rect key="frame" x="20" y="199" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PGn-N5-5pe">
+                                <rect key="frame" x="20" y="228" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ULs-4O-5a9" firstAttribute="top" secondItem="yCu-EX-ArJ" secondAttribute="top" constant="40" id="0Ak-eD-zA9"/>
+                            <constraint firstItem="yCu-EX-ArJ" firstAttribute="trailing" secondItem="ULs-4O-5a9" secondAttribute="trailing" constant="20" id="46g-tb-DV0"/>
+                            <constraint firstItem="yCu-EX-ArJ" firstAttribute="trailing" secondItem="PGn-N5-5pe" secondAttribute="trailing" constant="20" id="DJo-E0-348"/>
+                            <constraint firstItem="PGn-N5-5pe" firstAttribute="leading" secondItem="yCu-EX-ArJ" secondAttribute="leading" constant="20" id="FqG-N2-fSR"/>
+                            <constraint firstItem="ULs-4O-5a9" firstAttribute="leading" secondItem="yCu-EX-ArJ" secondAttribute="leading" constant="20" id="IRq-i0-r9D"/>
+                            <constraint firstItem="yCu-EX-ArJ" firstAttribute="trailing" secondItem="VMk-yd-cqb" secondAttribute="trailing" constant="20" id="PfM-81-6Ra"/>
+                            <constraint firstItem="yCu-EX-ArJ" firstAttribute="trailing" secondItem="kVc-Mh-Gb3" secondAttribute="trailing" constant="20" id="ZpB-tH-o7G"/>
+                            <constraint firstItem="PGn-N5-5pe" firstAttribute="top" secondItem="VMk-yd-cqb" secondAttribute="bottom" constant="8" id="cYG-cT-1oJ"/>
+                            <constraint firstItem="VMk-yd-cqb" firstAttribute="top" secondItem="kVc-Mh-Gb3" secondAttribute="bottom" constant="8" id="dtn-iQ-aPQ"/>
+                            <constraint firstItem="kVc-Mh-Gb3" firstAttribute="top" secondItem="ULs-4O-5a9" secondAttribute="bottom" constant="8" id="nt5-93-I3G"/>
+                            <constraint firstItem="VMk-yd-cqb" firstAttribute="leading" secondItem="yCu-EX-ArJ" secondAttribute="leading" constant="20" id="oP8-sd-503"/>
+                            <constraint firstItem="kVc-Mh-Gb3" firstAttribute="leading" secondItem="yCu-EX-ArJ" secondAttribute="leading" constant="20" id="taN-bo-kOQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yCu-EX-ArJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="qZL-xV-E1N"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxU-5v-vQf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="675" y="204"/>
+            <point key="canvasLocation" x="672.46376811594212" y="203.57142857142856"/>
         </scene>
     </scenes>
 </document>
