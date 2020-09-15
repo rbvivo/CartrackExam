@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet private weak var nameField: UITextField!
     @IBOutlet private weak var passwordField: UITextField!
+    @IBOutlet private weak var countryField: UITextField!
 
     let viewModel: LoginViewModel = LoginViewModel()
     override func viewDidLoad() {
@@ -31,5 +32,9 @@ class LoginViewController: UIViewController {
             alertView.addAction(okAction)
             self?.present(alertView, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction private func countryFieldPressed() {
+        
     }
 }

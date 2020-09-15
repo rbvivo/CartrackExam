@@ -30,7 +30,6 @@ class DBHelper {
                 .appendingPathComponent(dbPath)
             
             var db: OpaquePointer? = nil
-            print (fileURL)
             if sqlite3_open(fileURL.path, &db) != SQLITE_OK {
                 return nil
             }
@@ -80,7 +79,7 @@ class DBHelper {
     
     
     func verifyUser(name: String, password: String) {
-        let queryStatementString = "SELECT * FROM user Where name =? And password = ?;"
+        let queryStatementString = "SELECT * FROM user Where name = ? And password = ?;"
         var queryStatement: OpaquePointer? = nil
         var users : [User] = []
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
