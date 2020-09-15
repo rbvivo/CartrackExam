@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet private weak var passwordField: UITextField!
     @IBOutlet private weak var countryField: UITextField!
 
-    let viewModel: LoginViewModel = LoginViewModel()
+    private let viewModel: LoginViewModel = LoginViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
       

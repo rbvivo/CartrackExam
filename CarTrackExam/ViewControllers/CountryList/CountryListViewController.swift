@@ -9,7 +9,8 @@
 import UIKit
 
 class CountryListViewController: UIViewController {
-    let viewModel: CountryListViewModel = CountryListViewModel()
+    private let viewModel: CountryListViewModel = CountryListViewModel()
+    private let searchController = UISearchController()
     var selectCountry: ((_ selectedCountry: String) -> ())?
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -40,6 +41,7 @@ class CountryListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupSearch()
     }
     
     private func setupUI() {
@@ -55,6 +57,20 @@ class CountryListViewController: UIViewController {
         navigationItem.rightBarButtonItem = doneButton
     }
     
+    private func setupSearch() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.accessibilityIdentifier = "searchBar"
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.delegate = self
+        searchController.searchBar.returnKeyType = .done
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.automaticallyShowsCancelButton = true
+        
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
+    }
+    
     @objc private func closeButtonPressed() {
         dismiss(animated: true, completion: nil)
     }
@@ -68,19 +84,48 @@ class CountryListViewController: UIViewController {
 
 extension CountryListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.countryList.count
+        return viewModel.isSearching ? viewModel.searchList.count : viewModel.countryList.count
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         doneButton.isEnabled = true
-        viewModel.selectedCountry = viewModel.countryList[indexPath.row]
+        viewModel.selectedCountry = viewModel.isSearching ? viewModel.searchList[indexPath.row] : viewModel.countryList[indexPath.row]
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CountryTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.setCountryText(countryText: viewModel.countryList[indexPath.row])
+        cell.setCountryText(countryText: viewModel.isSearching ? viewModel.searchList[indexPath.row] : viewModel.countryList[indexPath.row])
         return cell
     }
-    
-    
+}
+
+extension CountryListViewController: UISearchBarDelegate {
+    public func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    public func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        
+    }
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.isSearching = false
+        viewModel.searchCountry(searchText: "")
+        tableView.reloadData()
+        searchBar.showsCancelButton = false
+    }
+}
+
+extension CountryListViewController: UISearchResultsUpdating {
+    public func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        if text.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            return
+        }
+        
+        viewModel.isSearching = true
+        viewModel.searchCountry(searchText: text)
+        tableView.reloadData()
+    }
 }
