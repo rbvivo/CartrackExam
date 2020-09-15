@@ -18,6 +18,11 @@
 		1D7B43F0250F53F100BE7677 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43EF250F53F100BE7677 /* User.swift */; };
 		1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43F3250F630700BE7677 /* DBHelper.swift */; };
 		1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43F7250F909400BE7677 /* LoginViewModel.swift */; };
+		1D7B43FD2510655000BE7677 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43FC2510655000BE7677 /* CountryListViewController.swift */; };
+		1D7B43FF2510679A00BE7677 /* CountryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B43FE2510679A00BE7677 /* CountryListViewModel.swift */; };
+		1D7B44022510986400BE7677 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44012510986400BE7677 /* ReusableView.swift */; };
+		1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */; };
+		1D7B440725109B2300BE7677 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440625109B2300BE7677 /* UITableView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,11 @@
 		1D7B43EF250F53F100BE7677 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1D7B43F3250F630700BE7677 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		1D7B43F7250F909400BE7677 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1D7B43FC2510655000BE7677 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		1D7B43FE2510679A00BE7677 /* CountryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewModel.swift; sourceTree = "<group>"; };
+		1D7B44012510986400BE7677 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
+		1D7B440625109B2300BE7677 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,8 @@
 			children = (
 				1D7B43BC250F4AE000BE7677 /* AppDelegate.swift */,
 				1D7B43BE250F4AE000BE7677 /* SceneDelegate.swift */,
+				1D7B440525109B0200BE7677 /* Extensions */,
+				1D7B4400251097D300BE7677 /* Views */,
 				1D7B43F2250F62F400BE7677 /* Utilities */,
 				1D7B43F1250F53F500BE7677 /* Models */,
 				1D7B43EE250F53CE00BE7677 /* ViewControllers */,
@@ -181,8 +193,27 @@
 		1D7B43FB250FBC2600BE7677 /* CountryList */ = {
 			isa = PBXGroup;
 			children = (
+				1D7B43FC2510655000BE7677 /* CountryListViewController.swift */,
+				1D7B43FE2510679A00BE7677 /* CountryListViewModel.swift */,
 			);
 			path = CountryList;
+			sourceTree = "<group>";
+		};
+		1D7B4400251097D300BE7677 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B44012510986400BE7677 /* ReusableView.swift */,
+				1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D7B440525109B0200BE7677 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B440625109B2300BE7677 /* UITableView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,8 +347,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7B440725109B2300BE7677 /* UITableView+Extension.swift in Sources */,
+				1D7B44022510986400BE7677 /* ReusableView.swift in Sources */,
 				1D7B43F0250F53F100BE7677 /* User.swift in Sources */,
+				1D7B43FF2510679A00BE7677 /* CountryListViewModel.swift in Sources */,
 				1D7B43ED250F523D00BE7677 /* LoginViewController.swift in Sources */,
+				1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */,
+				1D7B43FD2510655000BE7677 /* CountryListViewController.swift in Sources */,
 				1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */,
 				1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */,
 				1D7B43BD250F4AE000BE7677 /* AppDelegate.swift in Sources */,

@@ -35,6 +35,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction private func countryFieldPressed() {
-        
+        let countryController = CountryListViewController()
+        let navigation = UINavigationController(rootViewController: countryController)
+        self.present(navigation, animated: true, completion: nil)
+        countryController.selectCountry = { [weak self] selectedCountry in
+            self?.countryField.text = selectedCountry
+        }
     }
 }
