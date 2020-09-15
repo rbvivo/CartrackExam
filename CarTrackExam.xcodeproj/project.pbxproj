@@ -23,6 +23,10 @@
 		1D7B44022510986400BE7677 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44012510986400BE7677 /* ReusableView.swift */; };
 		1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */; };
 		1D7B440725109B2300BE7677 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440625109B2300BE7677 /* UITableView+Extension.swift */; };
+		1D7B44092510CFC700BE7677 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44082510CFC700BE7677 /* UserListViewController.swift */; };
+		1D7B440B2510D18E00BE7677 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440A2510D18E00BE7677 /* UserListViewModel.swift */; };
+		1D7B440D2510D65D00BE7677 /* JSONUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440C2510D65D00BE7677 /* JSONUser.swift */; };
+		1D7B440F2510FB9000BE7677 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		1D7B44012510986400BE7677 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryTableViewCell.swift; sourceTree = "<group>"; };
 		1D7B440625109B2300BE7677 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1D7B44082510CFC700BE7677 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		1D7B440A2510D18E00BE7677 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		1D7B440C2510D65D00BE7677 /* JSONUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUser.swift; sourceTree = "<group>"; };
+		1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7B43EF250F53F100BE7677 /* User.swift */,
+				1D7B440C2510D65D00BE7677 /* JSONUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +195,8 @@
 		1D7B43FA250FAB2B00BE7677 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
+				1D7B44082510CFC700BE7677 /* UserListViewController.swift */,
+				1D7B440A2510D18E00BE7677 /* UserListViewModel.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
@@ -204,6 +215,7 @@
 			children = (
 				1D7B44012510986400BE7677 /* ReusableView.swift */,
 				1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */,
+				1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,12 +363,16 @@
 				1D7B44022510986400BE7677 /* ReusableView.swift in Sources */,
 				1D7B43F0250F53F100BE7677 /* User.swift in Sources */,
 				1D7B43FF2510679A00BE7677 /* CountryListViewModel.swift in Sources */,
+				1D7B440F2510FB9000BE7677 /* UserTableViewCell.swift in Sources */,
 				1D7B43ED250F523D00BE7677 /* LoginViewController.swift in Sources */,
+				1D7B44092510CFC700BE7677 /* UserListViewController.swift in Sources */,
 				1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */,
 				1D7B43FD2510655000BE7677 /* CountryListViewController.swift in Sources */,
 				1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */,
+				1D7B440B2510D18E00BE7677 /* UserListViewModel.swift in Sources */,
 				1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */,
 				1D7B43BD250F4AE000BE7677 /* AppDelegate.swift in Sources */,
+				1D7B440D2510D65D00BE7677 /* JSONUser.swift in Sources */,
 				1D7B43BF250F4AE000BE7677 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
