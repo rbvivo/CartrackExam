@@ -11,8 +11,8 @@ class LoginViewModel {
     var verifySuccess: (() -> Void)?
     var verifyFailed: (() -> Void)?
     
-    func login(name: String, password: String) {
-        dbHelper.verifyUser(name: name, password: password)
+    func login(name: String, password: String, country: String) {
+        dbHelper.verifyUser(name: name, password: password, country: country)
         dbHelper.verifySuccess = { [weak self] in
             self?.verifySuccess?()
         }

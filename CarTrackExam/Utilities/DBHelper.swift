@@ -20,7 +20,7 @@ class DBHelper {
     init() {
         db = openDatabase()
         createTable()
-        insert(id: 1, name: "TestUser", password: "Test123!")
+        insert(id: 1, name: "TestUser", password: "Test123!", country: "Philippines")
     }
     
     private func openDatabase() -> OpaquePointer?
@@ -43,7 +43,7 @@ class DBHelper {
     }
     
     private func createTable() {
-        let createTableString = "CREATE TABLE IF NOT EXISTS user(Id INTEGER PRIMARY KEY,name TEXT,password TEXT);"
+        let createTableString = "CREATE TABLE IF NOT EXISTS user(Id INTEGER PRIMARY KEY, name TEXT, password TEXT, country TEXT);"
         var createTableStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, createTableString, -1, &createTableStatement, nil) == SQLITE_OK {
             if sqlite3_step(createTableStatement) == SQLITE_DONE {
@@ -57,14 +57,15 @@ class DBHelper {
         sqlite3_finalize(createTableStatement)
     }
     
-    private func insert(id:Int, name:String, password:String) {
+    private func insert(id: Int, name: String, password: String, country: String) {
       
-        let insertStatementString = "INSERT OR IGNORE INTO user (Id, name, password) VALUES (?, ?, ?);"
+        let insertStatementString = "INSERT OR IGNORE INTO user (Id, name, password, country) VALUES (?, ?, ?, ?);"
         var insertStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
             sqlite3_bind_int(insertStatement, 1, Int32(id))
             sqlite3_bind_text(insertStatement, 2, (name as NSString).utf8String, -1, nil)
             sqlite3_bind_text(insertStatement, 3, (password as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(insertStatement, 4, (country as NSString).utf8String, -1, nil)
             
             if sqlite3_step(insertStatement) == SQLITE_DONE {
                 print("Successfully inserted row.")
@@ -78,19 +79,21 @@ class DBHelper {
     }
     
     
-    func verifyUser(name: String, password: String) {
-        let queryStatementString = "SELECT * FROM user Where name = ? And password = ?;"
+    func verifyUser(name: String, password: String, country: String) {
+        let queryStatementString = "SELECT * FROM user Where name = ? And password = ? And country = ?;"
         var queryStatement: OpaquePointer? = nil
         var users : [User] = []
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
             sqlite3_bind_text(queryStatement, 1, (name as NSString).utf8String, -1, nil)
             sqlite3_bind_text(queryStatement, 2, (password as NSString).utf8String, -1, nil)
+            sqlite3_bind_text(queryStatement, 3, (country as NSString).utf8String, -1, nil)
             
             while sqlite3_step(queryStatement) == SQLITE_ROW {
                 let id = sqlite3_column_int(queryStatement, 0)
                 let name = String(describing: String(cString: sqlite3_column_text(queryStatement, 1)))
                 let password = String(describing: String(cString: sqlite3_column_text(queryStatement, 2)))
-                users.append(User(id: Int(id), name: name, password: password))
+                let country = String(describing: String(cString: sqlite3_column_text(queryStatement, 3)))
+                users.append(User(id: Int(id), name: name, password: password, country: country))
             }
         }
         

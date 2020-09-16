@@ -66,7 +66,7 @@ class CountryListViewController: UIViewController {
         searchController.searchBar.returnKeyType = .done
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.automaticallyShowsCancelButton = true
-        
+        searchController.searchBar.tintColor = .black
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
     }
@@ -77,6 +77,7 @@ class CountryListViewController: UIViewController {
     
     @objc private func doneButtonPressed() {
         selectCountry?(viewModel.selectedCountry)
+        searchController.searchBar.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
 

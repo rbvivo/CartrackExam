@@ -40,7 +40,7 @@ class LoginViewController: UIViewController {
     @IBAction private func loginPressed(){
         activityIndicator.startAnimating()
         self.view.endEditing(true)
-        viewModel.login(name: nameField.text ?? "", password: passwordField.text ?? "")
+        viewModel.login(name: nameField.text ?? "", password: passwordField.text ?? "", country: countryField.text ?? "")
         viewModel.verifySuccess = { [weak self] in
             self?.activityIndicator.stopAnimating()
             let userController = UserListViewController()
@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
         }
         viewModel.verifyFailed = { [weak self] in
             self?.activityIndicator.stopAnimating()
-            let alertView = UIAlertController(title: "Error", message: "Wrong Username or Password", preferredStyle: .alert)
+            let alertView = UIAlertController(title: "Error", message: "Wrong Username, Password or Country", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
             alertView.addAction(okAction)
             self?.present(alertView, animated: true, completion: nil)
