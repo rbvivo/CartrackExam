@@ -30,6 +30,8 @@
 		1D7B44122511000C00BE7677 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44112511000C00BE7677 /* UserService.swift */; };
 		1D7B44142511004800BE7677 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44132511004800BE7677 /* ApiResponse.swift */; };
 		1D7B4416251100A100BE7677 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B4415251100A100BE7677 /* ApiEndpoint.swift */; };
+		1D7B4419251211A400BE7677 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B4418251211A400BE7677 /* MapViewController.swift */; };
+		1D7B441B2512140800BE7677 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B441A2512140800BE7677 /* MapViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		1D7B44112511000C00BE7677 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1D7B44132511004800BE7677 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		1D7B4415251100A100BE7677 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		1D7B4418251211A400BE7677 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1D7B441A2512140800BE7677 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,7 @@
 		1D7B43EE250F53CE00BE7677 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D7B44172512118400BE7677 /* MapView */,
 				1D7B43FB250FBC2600BE7677 /* CountryList */,
 				1D7B43FA250FAB2B00BE7677 /* UserList */,
 				1D7B43F9250FAB2000BE7677 /* Login */,
@@ -243,6 +248,15 @@
 				1D7B4415251100A100BE7677 /* ApiEndpoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1D7B44172512118400BE7677 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B4418251211A400BE7677 /* MapViewController.swift */,
+				1D7B441A2512140800BE7677 /* MapViewModel.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,9 +397,11 @@
 				1D7B440F2510FB9000BE7677 /* UserTableViewCell.swift in Sources */,
 				1D7B43ED250F523D00BE7677 /* LoginViewController.swift in Sources */,
 				1D7B44092510CFC700BE7677 /* UserListViewController.swift in Sources */,
+				1D7B4419251211A400BE7677 /* MapViewController.swift in Sources */,
 				1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */,
 				1D7B43FD2510655000BE7677 /* CountryListViewController.swift in Sources */,
 				1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */,
+				1D7B441B2512140800BE7677 /* MapViewModel.swift in Sources */,
 				1D7B44142511004800BE7677 /* ApiResponse.swift in Sources */,
 				1D7B440B2510D18E00BE7677 /* UserListViewModel.swift in Sources */,
 				1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */,

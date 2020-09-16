@@ -59,7 +59,7 @@ class DBHelper {
     
     private func insert(id:Int, name:String, password:String) {
       
-        let insertStatementString = "INSERT INTO user (Id, name, password) VALUES (?, ?, ?);"
+        let insertStatementString = "INSERT OR IGNORE INTO user (Id, name, password) VALUES (?, ?, ?);"
         var insertStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, insertStatementString, -1, &insertStatement, nil) == SQLITE_OK {
             sqlite3_bind_int(insertStatement, 1, Int32(id))
