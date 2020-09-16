@@ -135,12 +135,12 @@
 			children = (
 				1D7B43BC250F4AE000BE7677 /* AppDelegate.swift */,
 				1D7B43BE250F4AE000BE7677 /* SceneDelegate.swift */,
-				1D7B44102510FFCE00BE7677 /* Network */,
 				1D7B440525109B0200BE7677 /* Extensions */,
-				1D7B4400251097D300BE7677 /* Views */,
-				1D7B43F2250F62F400BE7677 /* Utilities */,
 				1D7B43F1250F53F500BE7677 /* Models */,
+				1D7B44102510FFCE00BE7677 /* Network */,
+				1D7B43F2250F62F400BE7677 /* Utilities */,
 				1D7B43EE250F53CE00BE7677 /* ViewControllers */,
+				1D7B4400251097D300BE7677 /* Views */,
 				1D7B43C2250F4AE000BE7677 /* Main.storyboard */,
 				1D7B43C5250F4AE300BE7677 /* Assets.xcassets */,
 				1D7B43C7250F4AE300BE7677 /* LaunchScreen.storyboard */,
@@ -170,10 +170,10 @@
 		1D7B43EE250F53CE00BE7677 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B44172512118400BE7677 /* MapView */,
 				1D7B43FB250FBC2600BE7677 /* CountryList */,
-				1D7B43FA250FAB2B00BE7677 /* UserList */,
 				1D7B43F9250FAB2000BE7677 /* Login */,
+				1D7B44172512118400BE7677 /* MapView */,
+				1D7B43FA250FAB2B00BE7677 /* UserList */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,8 +181,8 @@
 		1D7B43F1250F53F500BE7677 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B43EF250F53F100BE7677 /* User.swift */,
 				1D7B440C2510D65D00BE7677 /* JSONUser.swift */,
+				1D7B43EF250F53F100BE7677 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,8 +225,8 @@
 		1D7B4400251097D300BE7677 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B44012510986400BE7677 /* ReusableView.swift */,
 				1D7B440325109A4800BE7677 /* CountryTableViewCell.swift */,
+				1D7B44012510986400BE7677 /* ReusableView.swift */,
 				1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */,
 			);
 			path = Views;
@@ -243,9 +243,9 @@
 		1D7B44102510FFCE00BE7677 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1D7B44112511000C00BE7677 /* UserService.swift */,
-				1D7B44132511004800BE7677 /* ApiResponse.swift */,
 				1D7B4415251100A100BE7677 /* ApiEndpoint.swift */,
+				1D7B44132511004800BE7677 /* ApiResponse.swift */,
+				1D7B44112511000C00BE7677 /* UserService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
