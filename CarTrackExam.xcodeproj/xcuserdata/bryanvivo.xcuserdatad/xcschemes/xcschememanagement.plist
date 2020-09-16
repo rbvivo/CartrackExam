@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CarTrackExamTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1D7B43B8250F4ADF00BE7677</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D7B43CE250F4AE300BE7677</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1D7B43D9250F4AE300BE7677</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>
