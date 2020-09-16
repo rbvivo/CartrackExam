@@ -27,6 +27,9 @@
 		1D7B440B2510D18E00BE7677 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440A2510D18E00BE7677 /* UserListViewModel.swift */; };
 		1D7B440D2510D65D00BE7677 /* JSONUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440C2510D65D00BE7677 /* JSONUser.swift */; };
 		1D7B440F2510FB9000BE7677 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */; };
+		1D7B44122511000C00BE7677 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44112511000C00BE7677 /* UserService.swift */; };
+		1D7B44142511004800BE7677 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B44132511004800BE7677 /* ApiResponse.swift */; };
+		1D7B4416251100A100BE7677 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7B4415251100A100BE7677 /* ApiEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		1D7B440A2510D18E00BE7677 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		1D7B440C2510D65D00BE7677 /* JSONUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONUser.swift; sourceTree = "<group>"; };
 		1D7B440E2510FB9000BE7677 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		1D7B44112511000C00BE7677 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		1D7B44132511004800BE7677 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		1D7B4415251100A100BE7677 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 			children = (
 				1D7B43BC250F4AE000BE7677 /* AppDelegate.swift */,
 				1D7B43BE250F4AE000BE7677 /* SceneDelegate.swift */,
+				1D7B44102510FFCE00BE7677 /* Network */,
 				1D7B440525109B0200BE7677 /* Extensions */,
 				1D7B4400251097D300BE7677 /* Views */,
 				1D7B43F2250F62F400BE7677 /* Utilities */,
@@ -226,6 +233,16 @@
 				1D7B440625109B2300BE7677 /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D7B44102510FFCE00BE7677 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1D7B44112511000C00BE7677 /* UserService.swift */,
+				1D7B44132511004800BE7677 /* ApiResponse.swift */,
+				1D7B4415251100A100BE7677 /* ApiEndpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,11 +386,14 @@
 				1D7B440425109A4800BE7677 /* CountryTableViewCell.swift in Sources */,
 				1D7B43FD2510655000BE7677 /* CountryListViewController.swift in Sources */,
 				1D7B43F8250F909400BE7677 /* LoginViewModel.swift in Sources */,
+				1D7B44142511004800BE7677 /* ApiResponse.swift in Sources */,
 				1D7B440B2510D18E00BE7677 /* UserListViewModel.swift in Sources */,
 				1D7B43F4250F630700BE7677 /* DBHelper.swift in Sources */,
+				1D7B44122511000C00BE7677 /* UserService.swift in Sources */,
 				1D7B43BD250F4AE000BE7677 /* AppDelegate.swift in Sources */,
 				1D7B440D2510D65D00BE7677 /* JSONUser.swift in Sources */,
 				1D7B43BF250F4AE000BE7677 /* SceneDelegate.swift in Sources */,
+				1D7B4416251100A100BE7677 /* ApiEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

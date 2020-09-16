@@ -95,11 +95,12 @@ class DBHelper {
         }
         
         sqlite3_finalize(queryStatement)
-        
-        if users.count > 0 {
-            verifySuccess?()
-        } else {
-            verifyFailed?()
+        DispatchQueue.main.async { [weak self] in
+            if users.count > 0 {
+                self?.verifySuccess?()
+            } else {
+                self?.verifyFailed?()
+            }
         }
     }
 }

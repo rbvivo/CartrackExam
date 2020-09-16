@@ -22,11 +22,56 @@ class UserListViewController: UIViewController {
         tableView.separatorColor = .separator
         return tableView
     }()
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = .black
+        return activityIndicator
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
+        getUsers()
+    }
+    
+    private func setupUI() {
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        ])
+        setupIndicator()
+    }
+    
+    private func setupIndicator() {
+        view.addSubview(activityIndicator)
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func getUsers() {
+        activityIndicator.startAnimating()
+        viewModel.retrieveUsers()
+        viewModel.fetchUsersCompleted = { [weak self] in
+            self?.activityIndicator.stopAnimating()
+            self?.tableView.reloadData()
+        }
+        viewModel.fetchUsersFailedHandler = { [weak self] error in
+            self?.activityIndicator.stopAnimating()
+            self?.tableView.reloadData()
+            let alertView = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alertView.addAction(okAction)
+            self?.present(alertView, animated: true, completion: nil)
+            
+        }
     }
 }
 

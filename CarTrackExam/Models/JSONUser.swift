@@ -5,7 +5,7 @@
 //  Created by Bryan Vivo on 9/15/20.
 //  Copyright © 2020 Bryan Vivo. All rights reserved.
 //
-
+typealias UserList = [JSONUser]
 class JSONUser: Codable {
     let id: Int
     let name: String
