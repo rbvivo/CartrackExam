@@ -86,6 +86,7 @@ extension UserListViewController: UITableViewDelegate, UITableViewDataSource {
         mapController.viewModel = MapViewModel(longitude: viewModel.users[indexPath.row].address.geo.lng, latitude: viewModel.users[indexPath.row].address.geo.lat)
         let navigation = UINavigationController(rootViewController: mapController)
         self.present(navigation, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
